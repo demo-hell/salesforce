@@ -1,0 +1,13 @@
+name: Caller Default
+
+on:
+  push:
+    branches: [release, hotfix, main]
+  pull_request:
+    branches: [release, hotfix, main]
+    
+
+jobs:
+  pipeline:
+    uses: demo-hell/reusable-pipelines/.github/workflows/sf-delta.yml@main
+    secrets: inherit
